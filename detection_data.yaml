@@ -1,0 +1,31 @@
+names:
+- Basil
+- Beef
+- Cheese
+- Chicken
+- Eggplant
+- Eggs
+- Green Pepper
+- Ham
+- Jalapenoes
+- Mushrooms
+- Nutella
+- Olives
+- Onions
+- Pepperoni
+- Pineapple
+- Pizza
+- Red Pepper
+- Rucola
+- Sausage
+- Tomato
+nc: 20
+roboflow:
+  license: CC BY 4.0
+  project: pizza-detector-and-toppings
+  url: https://universe.roboflow.com/pizzaassignment/pizza-detector-and-toppings/dataset/3
+  version: 3
+  workspace: pizzaassignment
+test: ../test/images
+train: ../train/images
+val: ../valid/images

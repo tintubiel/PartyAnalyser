@@ -1,0 +1,15 @@
+services:
+  pizza_detection:
+    model_path: '/Users/tintubiel/PycharmProjects/PartyChecker/weights/detection_model.pt'
+    pizza_class_id: 15
+    pepperoni_class_id: 13
+  wine_classification:
+    model_path: '/Users/tintubiel/PycharmProjects/PartyChecker/weights/classification_model.ckpt'
+    class_names:                                              # Список классов
+      - not_wine                                             # 0: не вино
+      - wine_bottles                                        # 1: бутылки вина
+      - wine_glasses                                        # 2: бокалы для вина
+    not_wine_class_id: 0
+    wine_bottles_class_id: 1
+    wine_glasses_class_id: 2
+
