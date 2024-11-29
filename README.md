@@ -28,8 +28,7 @@
 1. Клонируйте репозиторий:
    
 
-    git clone <URL_REPOSITORY>
-    cd <REPOSITORY_DIRECTORY>
+    git clone https://github.com/tintubiel/PartyAnalyser.git
 
 2. Установите зависимости:
     
