@@ -27,24 +27,26 @@
 
 1. Клонируйте репозиторий:
    
-
-    git clone https://github.com/tintubiel/PartyAnalyser.git
-
+```
+git clone https://github.com/tintubiel/PartyAnalyser.git
+```
 2. Установите зависимости:
     
-    
-    make venv
-    make install
+ ```   
+ make venv
+ make install
+```
 3. Загрузите веса моделей:
 
-
-    make download_weights
-
+```
+make download_weights
+```
 ## Запуск приложения
 
 Для запуска приложения используйте команду:
-
-    make run_app
+```
+make run_app
+```
 ## Маршруты API
 
 ### 1. GET /
@@ -71,8 +73,9 @@
 Класс PizzaWineAnalytics выполняет анализ изображения с целью определения наличия пиццы, пеперони и вина. Он использует модели детекции и классификации для обработки входного изображения и предоставляет информацию о том, стоит ли идти на вечеринку.
 
 ### Конструктор
-
-    def __init__(self, detection_model: PizzaPepperoniDetector, classification_model: WineClassificator)
+```
+def __init__(self, detection_model: PizzaPepperoniDetector, classification_model: WineClassificator)
+```
 - Параметры:
   - detection_model: Экземпляр модели PizzaPepperoniDetector, отвечающей за обнаружение пиццы и пеперони в изображении.
   - classification_model: Экземпляр модели WineClassificator, предназначенной для классификации наличия вина.
@@ -80,25 +83,28 @@
 ### Свойства
 
 #### answers
-
-    @property
-    def answers(self)
+```
+@property
+def answers(self)
+```
 - Описание: Возвращает набор предопределенных сообщений о наличии пиццы и вина. 
 
 ### Методы
 
 #### predict
-
-    def predict(self, image: np.ndarray) -> Dict[str, bool]
+```
+def predict(self, image: np.ndarray) -> Dict[str, bool]
+```
 - Описание: Выполняет предсказание наличия пиццы, пеперони и вина по предоставленному изображению.
 
 #### _process_results
-
-    def _process_results(self, results) -> str
+```
+def _process_results(self, results) -> str
+```
 - Описание: Обрабатывает результаты предсказания и возвращает соответствующее сообщение о решении о вечеринке.
 
 ## Пример использования
-
+```
     if __name__ == "__main__":
         classificator = WineClassificator()
         detector = PizzaPepperoniDetector()
@@ -107,3 +113,4 @@
         image = Image.open(image_path)
         image = np.array(image)
         print(analyser.predict(image))
+```
